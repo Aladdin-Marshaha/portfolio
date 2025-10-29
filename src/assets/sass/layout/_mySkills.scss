@@ -1,0 +1,40 @@
+	.skillsIcon {
+		font-size: 1.5rem;
+
+	}
+    .skillsTitle {
+        font-size: 2rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        color: #333;
+
+        border-bottom: #333 1px solid;
+    }
+
+    .mySkills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 5px;
+        
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        @media (min-width: 1200px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .skillsBox {
+            background: #f0f0f0;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+
+            &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }

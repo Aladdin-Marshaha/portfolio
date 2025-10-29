@@ -1,2 +1,2 @@
 # portfolio
-Detta är din portfolio byggd med React + Vite.
+Detta är min portfolio byggd med React + Vite.
