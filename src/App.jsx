@@ -67,13 +67,13 @@ function App() {
     (async () => {
       try {
         const basePath = import.meta.env.BASE_URL;
-        await loadScript(`${basePath}src/assets/js/jquery.min.js`);
-        await loadScript(`${basePath}src/assets/js/jquery.scrollex.min.js`);
-        await loadScript(`${basePath}src/assets/js/jquery.scrolly.min.js`);
-        await loadScript(`${basePath}src/assets/js/browser.min.js`);
-        await loadScript(`${basePath}src/assets/js/breakpoints.min.js`);
-        await loadScript(`${basePath}src/assets/js/util.js`);
-        await loadScript(`${basePath}src/assets/js/main.js`);
+        await loadScript(`${basePath}assets/js/jquery.min.js`);
+        await loadScript(`${basePath}assets/js/jquery.scrollex.min.js`);
+        await loadScript(`${basePath}assets/js/jquery.scrolly.min.js`);
+        await loadScript(`${basePath}assets/js/browser.min.js`);
+        await loadScript(`${basePath}assets/js/breakpoints.min.js`);
+        await loadScript(`${basePath}assets/js/util.js`);
+        await loadScript(`${basePath}assets/js/main.js`);
       } catch (e) {
         console.error('Kunde inte ladda skript:', e);
       }
