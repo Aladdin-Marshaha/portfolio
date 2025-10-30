@@ -6,7 +6,7 @@ function About() {
       <article className="post featured">
         <header className="major">
           <h1>Om mig</h1>
-          <p>Lär känna mig och min bakgrund inom utveckling</p>
+          <p>Lär känna mig och min bakgrund inom utveckling - Nu i development branch!</p>
         </header>
         <div className="content">
           <p>
