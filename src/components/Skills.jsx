@@ -6,8 +6,8 @@ function Skills() {
       <article className="post featured">
         <header className="major">
             <h1><a>Skills</a></h1>
-          <h1>Mina färdigheter</h1>
-          <p>Teknologier och verktyg jag behärskar</p>
+          <h1>My Skills</h1>
+          <p>Technologies and tools I master</p>
         </header>
         <div className="content">
                       <h3 className='skillsTitle'>Frontend Development</h3>

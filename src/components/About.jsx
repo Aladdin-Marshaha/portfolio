@@ -5,28 +5,28 @@ function About() {
     <div id="main">
       <article className="post featured">
         <header className="major">
-          <h1>Om mig</h1>
-          <p>Mjukvaruingenjör specialiserad inom .NET utveckling</p>
+          <h1>About Me</h1>
+          <p>Software Engineer specialized in .NET development</p>
         </header>
         <div className="content">
           <p>
-            Jag är en passionerad mjukvaruingenjör med specialisering inom .NET Fullstack utveckling. 
-            Med en gedigen utbildningsbakgrund från yrkeshögskola och praktisk erfarenhet inom både 
-            frontend och backend utveckling strävar jag efter att leverera högkvalitativa lösningar 
-            som gör skillnad.
+            I am a passionate Software Engineer specializing in .NET Fullstack development. 
+            With a solid educational background from vocational college and practical experience 
+            in both frontend and backend development, I strive to deliver high-quality solutions 
+            that make a difference.
           </p>
-          <h3>Min bakgrund:</h3>
+          <h3>My Background:</h3>
           <p>
-            Utbildad inom .NET utveckling på yrkeshögskola (2 år) där jag byggde en solid grund 
-            inom mjukvaruutveckling. Genom praktiska projekt och teoretisk kunskap har jag 
-            utvecklat expertis inom allt från små webbapplikationer till komplexa enterprise-system.
+            Educated in .NET development at vocational college (2 years) where I built a solid 
+            foundation in software development. Through practical projects and theoretical knowledge, 
+            I have developed expertise in everything from small web applications to complex enterprise systems.
           </p>
-          <h3>Vad jag brinner för:</h3>
+          <h3>What I'm passionate about:</h3>
           <ul>
-            <li>Ren och effektiv kod</li>
-            <li>Användarcentrerad design</li>
-            <li>Kontinuerlig inlärning</li>
-            <li>Teamarbete och kunskapsdelning</li>
+            <li>Clean and efficient code</li>
+            <li>User-centered design</li>
+            <li>Continuous learning</li>
+            <li>Teamwork and knowledge sharing</li>
           </ul>
         </div>
       </article>

@@ -5,8 +5,8 @@ function Projects() {
     <div id="main">
       <article className="post featured">
         <header className="major">
-          <h1>Mina projekt</h1>
-          <p>Utforska några av mina senaste arbeten</p>
+          <h1>My Projects</h1>
+          <p>Explore some of my recent work</p>
         </header>
         <div className="content">
           <article>
