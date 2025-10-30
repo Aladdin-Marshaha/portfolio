@@ -6,19 +6,20 @@ function About() {
       <article className="post featured">
         <header className="major">
           <h1>Om mig</h1>
-          <p>Lär känna mig och min bakgrund inom utveckling - Nu i development branch!</p>
+          <p>Mjukvaruingenjör specialiserad inom .NET utveckling</p>
         </header>
         <div className="content">
           <p>
-            Jag är en .NET Fullstack Developer med passion för att skapa
-            innovativa lösningar. Med omfattande erfarenhet inom både
-            frontend och backend utveckling strävar jag efter att leverera
-            högkvalitativa applikationer.
+            Jag är en passionerad mjukvaruingenjör med specialisering inom .NET Fullstack utveckling. 
+            Med en gedigen utbildningsbakgrund från yrkeshögskola och praktisk erfarenhet inom både 
+            frontend och backend utveckling strävar jag efter att leverera högkvalitativa lösningar 
+            som gör skillnad.
           </p>
           <h3>Min bakgrund:</h3>
           <p>
-            Med flera års erfarenhet inom mjukvaruutveckling har jag arbetat
-            med allt från små webbapplikationer till stora enterprise-system.
+            Utbildad inom .NET utveckling på yrkeshögskola (2 år) där jag byggde en solid grund 
+            inom mjukvaruutveckling. Genom praktiska projekt och teoretisk kunskap har jag 
+            utvecklat expertis inom allt från små webbapplikationer till komplexa enterprise-system.
           </p>
           <h3>Vad jag brinner för:</h3>
           <ul>

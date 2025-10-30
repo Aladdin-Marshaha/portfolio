@@ -98,7 +98,7 @@ function App() {
             }}
           />
           <h1>Aladdin Marshaha</h1>
-          <h2>.NET Fullstack Developer</h2>
+          <h2>Mjukvaruingenjör | .NET Specialist</h2>
           <ul className="actions">
             <li>
               <a href="#header" className="button icon solid solo fa-arrow-down scrolly">
