@@ -23,25 +23,30 @@ function Navigation() {
     <nav id="nav">
       <ul className="links">
         <li className={isActive('/')}>
-          <Link to="/">Home</Link>
+          <Link to="/"><i className="fa-solid fa-house"></i>&nbsp;&nbsp;Home</Link>
         </li>
         <li className={isActive('/about')}>
-          <Link to="/about">About</Link>
+          <Link to="/about"><i className="fa-sharp fa-solid fa-user"></i>&nbsp;&nbsp;About</Link>
         </li>
         <li className={isActive('/skills')}>
-          <Link to="/skills">Skills</Link>
+          <Link to="/skills"><i className="fa-solid fa-code"></i>&nbsp;&nbsp;Skills</Link>
         </li>
         <li className={isActive('/projects')}>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects"><i className="fa-solid fa-diagram-project"></i>&nbsp;&nbsp;Projects</Link>
         </li>
         <li className={isActive('/contact')}>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact"><i className="fa-solid fa-envelope"></i>&nbsp;&nbsp;Contact</Link>
         </li>
       </ul>
       <ul className="icons">
         <li>
-          <a href="#" className="icon brands fa-github">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Aladdin-Marshaha" className="icon brands fa-github">
             <span className="label">GitHub</span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aladdin-marshaha-3aaa53225/" className="icon brands fa-linkedin">
+            <span className="label">LinkedIn</span>
           </a>
         </li>
       </ul>
@@ -128,73 +133,12 @@ function App() {
         </Routes>
 
         {/* Footer */}
-        <footer id="footer">
-          <section>
-            <form method="post" action="#">
-              <div className="fields">
-                <div className="field">
-                  <label htmlFor="name">Name</label>
-                  <input type="text" name="name" id="name" />
-                </div>
-                <div className="field">
-                  <label htmlFor="email">Email</label>
-                  <input type="text" name="email" id="email" />
-                </div>
-                <div className="field">
-                  <label htmlFor="message">Message</label>
-                  <textarea name="message" id="message" rows="3" />
-                </div>
-              </div>
-              <ul className="actions">
-                <li>
-                  <input type="submit" value="Send Message" />
-                </li>
-              </ul>
-            </form>
-          </section>
-
-          <section className="split contact">
-            <section className="alt">
-              <h3>Address</h3>
-              <p>Stockholm, Sverige</p>
-            </section>
-            <section>
-              <h3>Phone</h3>
-              <p>
-                <a href="tel:+46737402420">+46 737 402 420</a>
-              </p>
-            </section>
-            <section>
-              <h3>Email</h3>
-              <p>
-                <a href="mailto:aladid90.se@gmail.com">aladid90.se@gmail.com</a>
-              </p>
-            </section>
-            <section>
-              <h3>Social</h3>
-              <ul className="icons alt">
-                <li>
-                  <a href="#" className="icon brands alt fa-github">
-                    <span className="label">GitHub</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="icon brands alt fa-linkedin">
-                    <span className="label">LinkedIn</span>
-                  </a>
-                </li>
-              </ul>
-            </section>
-          </section>
-        </footer>
+      
 
         {/* Copyright */}
         <div id="copyright">
           <ul>
-            <li>© 2024 Aladdin Marshaha</li>
-            <li>
-              Design: <a href="https://html5up.net">HTML5 UP</a>
-            </li>
+            <li>2025 © Designed and built by Aladdin Marshaha.</li>
           </ul>
         </div>
       </div>

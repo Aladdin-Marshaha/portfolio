@@ -38,6 +38,65 @@ function Contact() {
           </div>
         </div>
       </article>
+        <footer id="footer">
+          <section>
+            <form method="post" action="#">
+              <div className="fields">
+                <div className="field">
+                  <label htmlFor="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div className="field">
+                  <label htmlFor="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div className="field">
+                  <label htmlFor="message">Message</label>
+                  <textarea name="message" id="message" rows="3" />
+                </div>
+              </div>
+              <ul className="actions">
+                <li>
+                  <input type="submit" value="Send Message" />
+                </li>
+              </ul>
+            </form>
+          </section>
+
+          <section className="split contact">
+            <section className="alt">
+              <h3>Address</h3>
+              <p>Stockholm, Sverige</p>
+            </section>
+            <section>
+              <h3>Phone</h3>
+              <p>
+                <a href="tel:+46737402420">+46 737 402 420</a>
+              </p>
+            </section>
+            <section>
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:aladid90.se@gmail.com">aladid90.se@gmail.com</a>
+              </p>
+            </section>
+            <section>
+              <h3>Social</h3>
+              <ul className="icons alt">
+                <li>
+                  <a href="#" className="icon brands alt fa-github">
+                    <span className="label">GitHub</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="icon brands alt fa-linkedin">
+                    <span className="label">LinkedIn</span>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </section>
+        </footer>
     </div>
   );
 }

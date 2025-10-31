@@ -5,10 +5,6 @@ import pic01 from '../images/pic01.jpg';
 function Home() {
   return (
     <>
-      {/* Intro */}
-
-
-      {/* Main */}
       <div id="main">
         <article className="post featured">
           <header className="major">
@@ -26,9 +22,6 @@ function Home() {
               och användarcentrerad design.
             </p>
           </header>
-          <a href="#" className="image main">
-            <img src={pic01} alt="" />
-          </a>
         </article>
       </div>
     </>
