@@ -132,10 +132,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        {/* Footer */}
       
 
-        {/* Copyright */}
         <div id="copyright">
           <ul>
             <li>2025 © Designed and built by Aladdin Marshaha.</li>

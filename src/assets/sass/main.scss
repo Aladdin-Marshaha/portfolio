@@ -5,14 +5,7 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import 'libs/fixed-grid';
-@import 'fontawesome-all.min.css';
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900');
-
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 // Breakpoints.
 
@@ -35,8 +28,6 @@
 		@include color-form($p);
 		@include color-list($p);
 		@include color-section($p);
-		@include color-table($p);
-		@include color-pagination($p);
 	}
 
 // Base.
@@ -57,8 +48,6 @@
 	@import 'components/icons';
 	@import 'components/list';
 	@import 'components/section';
-	@import 'components/table';
-	@import 'components/pagination';
 
 // Layout.
 
@@ -68,4 +57,4 @@
 	@import 'layout/nav';
 	@import 'layout/main';
 	@import 'layout/footer';
-	@import 'layout/navPanel';
+	@import 'layout/mySkills';
