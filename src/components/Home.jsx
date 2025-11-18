@@ -22,6 +22,7 @@ function Home() {
               och användarcentrerad design.
             </p>
           </header>
+          <h1 className='aladdin'>aladdin</h1>
         </article>
       </div>
     </>
