@@ -55,8 +55,12 @@
 	@import 'layout/intro';
 	@import 'layout/header';
 	@import 'layout/nav';
+	@import 'layout/navPanel';
 	@import 'layout/main';
 	@import 'layout/footer';
 	@import 'layout/mySkills';
 
 
+    .aladdin {
+        color: red;
+    }

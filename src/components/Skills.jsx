@@ -10,8 +10,7 @@ function Skills() {
           <p>Technologies and tools I master</p>
         </header>
         <div className="content">
-                      <h3 className='skillsTitle'>Frontend Development</h3>
-
+          <h3 className='skillsTitle'>Frontend Development</h3>
           <section>
             <div className='mySkills'>
               <div className='skillsBox'>
