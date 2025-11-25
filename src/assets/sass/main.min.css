@@ -3586,47 +3586,112 @@ body.is-navPanel-visible #navPanel {
 }
 
 .skillsIcon {
-  font-size: 1.5rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #909498;
+  transition: all 0.3s ease;
+  display: block;
+  text-align: center;
+}
+.skillsIcon i {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
 .skillsTitle {
-  font-size: 2rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  color: #333;
-  border-bottom: #333 1px solid;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  color: #212931;
+  position: relative;
+  text-align: center;
+  font-weight: 900;
+}
+.skillsTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #18bfef;
+  border-radius: 2px;
+}
+.skillsTitle:first-of-type {
+  margin-top: 1rem;
 }
 
 .mySkills {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+@media (min-width: 480px) {
+  .mySkills {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
 @media (min-width: 768px) {
   .mySkills {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
   }
 }
 @media (min-width: 1200px) {
   .mySkills {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
   }
 }
 .mySkills .skillsBox {
-  background: #f0f0f0;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  border: 1px solid rgb(237.5, 237.5, 237.5);
+  box-shadow: 0 4px 20px rgba(220, 220, 220, 0.25), 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.mySkills .skillsBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(24, 191, 239, 0.05), transparent);
+  transition: left 0.6s ease;
 }
 .mySkills .skillsBox:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(24, 191, 239, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: rgba(24, 191, 239, 0.3);
 }
-
-.aladdin {
-  color: red;
+.mySkills .skillsBox:hover::before {
+  left: 100%;
+}
+.mySkills .skillsBox:hover .skillsIcon {
+  color: #18bfef;
+}
+.mySkills .skillsBox:hover .skillsIcon i {
+  transform: scale(1.1) rotate(5deg);
+}
+.mySkills .skillsBox:hover h3 {
+  color: #18bfef;
+  transform: translateY(-2px);
+}
+.mySkills .skillsBox h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212931;
+  margin: 0;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .aladdin {
