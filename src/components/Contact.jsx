@@ -1,6 +1,25 @@
 import React from 'react';
 
 function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      alert('Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
+      form.reset();
+    })
+    .catch((error) => {
+      alert('Ett fel uppstod. Försök igen eller kontakta mig direkt på aladdin90.se@gmail.com');
+    });
+  };
   return (
     <div id="main">
       <article className="post featured">
@@ -14,7 +33,7 @@ function Contact() {
       </article>
         <footer id="footer">
           <section>
-            <form method="POST" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+            <form method="POST" netlify-honeypot="bot-field" data-netlify="true" name="contact" onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="contact" />
               <div className="fields">
                 <div className="field" style={{display: 'none'}}>
