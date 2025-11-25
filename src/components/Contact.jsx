@@ -5,38 +5,12 @@ function Contact() {
     <div id="main">
       <article className="post featured">
         <header className="major">
-          <h1>Contact Me</h1>
-          <p>Let's discuss your next project</p>
-        </header>
-        <div className="content">
+          <h1><a>Contact Me</a></h1>
           <p>
             I'm always interested in new opportunities and exciting projects.
             Don't hesitate to reach out!
           </p>
-          
-          <div className="row">
-            <div className="col-6 col-12-small">
-              <h3>Direct Contact</h3>
-              <p><strong>Email:</strong> aladid90.se@gmail.com</p>
-              <p><strong>Phone:</strong> +46 737 402 420</p>
-            </div>
-            <div className="col-6 col-12-small">
-              <h3>Social Media</h3>
-              <ul className="icons">
-                <li>
-                  <a href="#" className="icon brands fa-github">
-                    <span className="label">GitHub</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="icon brands fa-linkedin">
-                    <span className="label">LinkedIn</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        </header>
       </article>
         <footer id="footer">
           <section>
@@ -66,7 +40,7 @@ function Contact() {
           <section className="split contact">
             <section className="alt">
               <h3>Address</h3>
-              <p>Stockholm, Sverige</p>
+              <p>Helsingborg , Sverige</p>
             </section>
             <section>
               <h3>Phone</h3>
@@ -84,12 +58,12 @@ function Contact() {
               <h3>Social</h3>
               <ul className="icons alt">
                 <li>
-                  <a href="#" className="icon brands alt fa-github">
+                  <a target="_blank" rel="noopener noreferrer" href="https://github.com/Aladdin-Marshaha" className="icon brands alt fa-github">
                     <span className="label">GitHub</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="icon brands alt fa-linkedin">
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/aladdin-marshaha-3aaa53225/" className="icon brands alt fa-linkedin">
                     <span className="label">LinkedIn</span>
                   </a>
                 </li>

@@ -5,7 +5,7 @@ function About() {
     <div id="main">
       <article className="post featured">
         <header className="major">
-          <h1>About Me</h1>
+          <h1><a>About Me</a></h1>
           <p>Software Engineer specialized in .NET development</p>
         </header>
         <div className="content">

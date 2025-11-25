@@ -5,7 +5,7 @@ function Projects() {
     <div id="main">
       <article className="post featured">
         <header className="major">
-          <h1>My Projects</h1>
+          <h1><a>My projects</a></h1>
           <p>Explore some of my recent work</p>
         </header>
         <div className="content">

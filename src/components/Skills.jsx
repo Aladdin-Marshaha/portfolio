@@ -5,9 +5,8 @@ function Skills() {
     <div id="main">
       <article className="post featured">
         <header className="major">
-            <h1><a>Skills</a></h1>
-          <h1>My Skills</h1>
-          <p>Technologies and tools I master</p>
+          <h1><a>Skills</a></h1>
+          <h3>Technologies and tools I've worked with</h3>
         </header>
         <div className="content">
           <h3 className='skillsTitle'>Frontend Development</h3>
@@ -101,7 +100,6 @@ function Skills() {
               </div>
             </div>
           </section>
-
         </div>
       </article>
     </div>
