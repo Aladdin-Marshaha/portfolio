@@ -1,22 +1,38 @@
 import React from 'react';
 
 function Contact() {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     
     const form = e.target;
     const formData = new FormData(form);
     
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString()
+    // Convert FormData to object
+    const data = {};
+    for (let [key, value] of formData.entries()) {
+      data[key] = value;
+    }
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...data
+      })
     })
     .then(() => {
       alert('Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
       form.reset();
     })
     .catch((error) => {
+      console.error('Error:', error);
       alert('Ett fel uppstod. Försök igen eller kontakta mig direkt på aladdin90.se@gmail.com');
     });
   };
