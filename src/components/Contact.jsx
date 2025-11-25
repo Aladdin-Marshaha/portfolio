@@ -14,8 +14,13 @@ function Contact() {
       </article>
         <footer id="footer">
           <section>
-            <form method="post" action="#">
+            <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+              <input type="hidden" name="form-name" value="contact" />
               <div className="fields">
+                <div className="field" style={{display: 'none'}}>
+                  <label htmlFor="bot-field">Don't fill this out if you're human:</label>
+                  <input name="bot-field" />
+                </div>
                 <div className="field">
                   <label htmlFor="name">Name</label>
                   <input type="text" name="name" id="name" />
