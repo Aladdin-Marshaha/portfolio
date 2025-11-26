@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [isLoading, setIsLoading] = useState(false);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('0oh1oK9pPnXxAjqGf');
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,9 +18,8 @@ function Contact() {
     // EmailJS configuration
     const serviceID = 'service_fo1f2gg';
     const templateID = 'template_rxg5669';
-    const publicKey = '0oh1oK9pPnXxAjqGf';
 
-    emailjs.sendForm(serviceID, templateID, form, publicKey)
+    emailjs.sendForm(serviceID, templateID, form)
       .then(() => {
         setIsLoading(false);
         alert('Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
