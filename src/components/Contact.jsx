@@ -1,40 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     
     const form = e.target;
-    const formData = new FormData(form);
     
-    // Convert FormData to object
-    const data = {};
-    for (let [key, value] of formData.entries()) {
-      data[key] = value;
-    }
-    
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        ...data
+    // EmailJS configuration
+    const serviceID = 'service_fo1f2gg';
+    const templateID = 'template_rxg5669';
+    const publicKey = '0oh1oK9pPnXxAjqGf';
+
+    emailjs.sendForm(serviceID, templateID, form, publicKey)
+      .then(() => {
+        setIsLoading(false);
+        alert('Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
+        form.reset();
       })
-    })
-    .then(() => {
-      alert('Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
-      form.reset();
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert('Ett fel uppstod. Försök igen eller kontakta mig direkt på aladdin90.se@gmail.com');
-    });
+      .catch((error) => {
+        setIsLoading(false);
+        console.error('EmailJS Error:', error);
+        alert('Ett fel uppstod. Försök igen eller kontakta mig direkt på aladdin90.se@gmail.com');
+      });
   };
   return (
     <div id="main">
@@ -49,16 +40,15 @@ function Contact() {
       </article>
         <footer id="footer">
           <section>
-            <form method="POST" data-netlify="true" name="contact" onSubmit={handleSubmit}>
-              <input type="hidden" name="form-name" value="contact" />
+            <form onSubmit={handleSubmit}>
               <div className="fields">
                 <div className="field">
-                  <label htmlFor="name">Name</label>
-                  <input type="text" name="name" id="name" required />
+                  <label htmlFor="from_name">Name</label>
+                  <input type="text" name="from_name" id="from_name" required />
                 </div>
                 <div className="field">
-                  <label htmlFor="email">Email</label>
-                  <input type="email" name="email" id="email" required />
+                  <label htmlFor="from_email">Email</label>
+                  <input type="email" name="from_email" id="from_email" required />
                 </div>
                 <div className="field">
                   <label htmlFor="message">Message</label>
@@ -67,7 +57,11 @@ function Contact() {
               </div>
               <ul className="actions">
                 <li>
-                  <input type="submit" value="Send Message" />
+                  <input 
+                    type="submit" 
+                    value={isLoading ? "Skickar..." : "Send Message"}
+                    disabled={isLoading}
+                  />
                 </li>
               </ul>
             </form>
