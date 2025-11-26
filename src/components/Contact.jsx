@@ -25,8 +25,8 @@ function Contact() {
         setIsLoading(false);
         setMessage('✅ Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
         form.reset();
-        // Ta bort meddelandet efter 5 sekunder
-        setTimeout(() => setMessage(''), 5000);
+        // Ta bort meddelandet efter 8 sekunder
+        setTimeout(() => setMessage(''), 8000);
       })
       .catch((error) => {
         setIsLoading(false);
