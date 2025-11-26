@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState('');
 
   // Initialize EmailJS
   useEffect(() => {
@@ -22,13 +23,16 @@ function Contact() {
     emailjs.sendForm(serviceID, templateID, form)
       .then(() => {
         setIsLoading(false);
-        alert('Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
+        setMessage('✅ Tack för ditt meddelande! Jag återkommer så snart som möjligt.');
         form.reset();
+        // Ta bort meddelandet efter 5 sekunder
+        setTimeout(() => setMessage(''), 5000);
       })
       .catch((error) => {
         setIsLoading(false);
         console.error('EmailJS Error:', error);
-        alert('Ett fel uppstod. Försök igen eller kontakta mig direkt på aladdin90.se@gmail.com');
+        setMessage('❌ Ett fel uppstod. Försök igen eller kontakta mig direkt på aladdin90.se@gmail.com');
+        setTimeout(() => setMessage(''), 8000);
       });
   };
   return (
@@ -45,6 +49,19 @@ function Contact() {
         <footer id="footer">
           <section>
             <form onSubmit={handleSubmit}>
+              {message && (
+                <div style={{
+                  padding: '1rem',
+                  marginBottom: '1rem',
+                  borderRadius: '5px',
+                  backgroundColor: message.includes('✅') ? '#d4edda' : '#f8d7da',
+                  color: message.includes('✅') ? '#155724' : '#721c24',
+                  border: `1px solid ${message.includes('✅') ? '#c3e6cb' : '#f5c6cb'}`,
+                  fontSize: '0.9rem'
+                }}>
+                  {message}
+                </div>
+              )}
               <div className="fields">
                 <div className="field">
                   <label htmlFor="from_name">Name</label>
