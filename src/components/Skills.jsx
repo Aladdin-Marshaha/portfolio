@@ -98,6 +98,10 @@ function Skills() {
                 <div className='skillsIcon'><i className="devicon-azure-plain fa-2xl"></i></div>
                 <h3>Azure</h3>
               </div>
+              <div className='skillsBox'>
+                <div className='skillsIcon'><i className="fa-solid fa-robot fa-2xl"></i></div>
+                <h3>GitHub Copilot</h3>
+              </div>
             </div>
           </section>
         </div>

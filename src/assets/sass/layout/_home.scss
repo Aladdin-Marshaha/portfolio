@@ -1,0 +1,231 @@
+// Home Page Styles
+#main {
+    .post.featured {
+        position: relative;
+        overflow: hidden;
+        
+        // Add subtle gradient background
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(_palette(accent), 0.02) 0%, 
+                rgba(_palette(accent), 0.05) 50%, 
+                rgba(_palette(accent), 0.02) 100%);
+            z-index: -1;
+        }
+
+        header.major {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+
+            p {
+                font-size: 1.2rem;
+                line-height: 1.8;
+                color: _palette(fg-light);
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+                background: _palette(bg-alt);
+                border-radius: 15px;
+                border: 2px solid _palette(border);
+                position: relative;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -2px;
+                    left: -2px;
+                    right: -2px;
+                    bottom: -2px;
+                    background: linear-gradient(45deg, 
+                        transparent, 
+                        rgba(_palette(accent), 0.3), 
+                        transparent, 
+                        rgba(_palette(accent), 0.3), 
+                        transparent);
+                    border-radius: 15px;
+                    z-index: -1;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 1.1rem;
+                    padding: 1.5rem;
+                }
+            }
+        }
+
+        .content {
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                color: _palette(fg-bold);
+                text-align: center;
+                position: relative;
+                font-weight: _font(weight-heading);
+            }
+
+            > p {
+                font-size: 1.1rem;
+                line-height: 1.7;
+                text-align: center;
+                color: _palette(fg-light);
+                max-width: 700px;
+                margin: 0 auto 2.5rem;
+                padding: 0 1rem;
+            }
+
+            .actions {
+                display: flex;
+                gap: 1.5rem;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top: 3rem;
+
+                .button {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    padding: 1rem 2rem;
+                    border-radius: 50px;
+                    font-weight: _font(weight-bold);
+                    text-decoration: none;
+                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    position: relative;
+                    overflow: hidden;
+                    min-width: 200px;
+                    justify-content: center;
+                    text-transform: none;
+                    
+                    i {
+                        font-size: 1.1em;
+                        transition: transform 0.3s ease;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(90deg, 
+                            transparent, 
+                            rgba(255, 255, 255, 0.2), 
+                            transparent);
+                        transition: left 0.5s ease;
+                    }
+
+                    &.primary {
+                        background: _palette(accent);
+                        color: #fff;
+                        border: 2px solid _palette(accent);
+                        box-shadow: 0 6px 20px rgba(_palette(accent), 0.3);
+
+                        &:hover {
+                            background: darken(_palette(accent), 10%);
+                            transform: translateY(-3px);
+                            box-shadow: 0 10px 30px rgba(_palette(accent), 0.4);
+
+                            i {
+                                transform: scale(1.1);
+                            }
+
+                            &::before {
+                                left: 100%;
+                            }
+                        }
+                    }
+
+                    &:not(.primary) {
+                        background: transparent;
+                        color: _palette(fg-bold);
+                        border: 2px solid _palette(border);
+
+                        &:hover {
+                            background: _palette(bg-alt);
+                            border-color: _palette(accent);
+                            color: _palette(accent);
+                            transform: translateY(-3px);
+                            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+                            i {
+                                transform: scale(1.1);
+                            }
+
+                            &::before {
+                                left: 100%;
+                                background: linear-gradient(90deg, 
+                                    transparent, 
+                                    rgba(_palette(accent), 0.1), 
+                                    transparent);
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    .button {
+                        width: 100%;
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 2rem 1rem;
+        }
+    }
+}
+
+// Additional styling for smooth animations
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Apply animation to main content
+#main .post.featured {
+    animation: fadeInUp 0.8s ease forwards;
+    
+    header.major p {
+        animation: fadeInUp 0.8s ease 0.2s both;
+    }
+    
+    .content h3 {
+        animation: fadeInUp 0.8s ease 0.4s both;
+    }
+    
+    .content > p {
+        animation: fadeInUp 0.8s ease 0.6s both;
+    }
+    
+    .content .actions {
+        animation: fadeInUp 0.8s ease 0.8s both;
+    }
+}

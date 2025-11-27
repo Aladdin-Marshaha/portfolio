@@ -54,7 +54,7 @@ function Projects() {
       tools: ["Blazor", "C#", "SQL Server", "Bootstrap"],
       status: "development", // Pågående utveckling, inte klickbar
       githubUrl: null,
-      hidden: true  // Gömd som exempel
+      hidden: false  // Gömd som exempel
     },
     {
       id: 6,
@@ -63,7 +63,7 @@ function Projects() {
       tools: ["Socket.io", "React", "Express", "PostgreSQL"],
       status: "development", // Pågående utveckling, inte klickbar
       githubUrl: null,
-      hidden: true
+      hidden: false
     },
     {
       id: 7,
@@ -72,7 +72,7 @@ function Projects() {
       tools: ["Socket.io", "React", "Express", "PostgreSQL"],
       status: "development", // Pågående utveckling, inte klickbar
       githubUrl: null,
-      hidden: true
+      hidden: false
     },
     {
       id: 8,
@@ -81,7 +81,7 @@ function Projects() {
       tools: ["Socket.io", "React", "Express", "PostgreSQL", "Firebase"],
       status: "github", // Pågående utveckling, inte klickbar
       githubUrl: "https://github.com/username/weather-dashboard", 
-      hidden: true
+      hidden: false
     }
   ];
 

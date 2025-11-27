@@ -1,0 +1,125 @@
+///
+/// About Section Styles
+///
+
+#about {
+  .post.featured {
+    .major {
+      text-align: center;
+      margin-bottom: 3rem;
+      
+      h1 a {
+        color: _palette(fg-bold);
+        border-bottom: solid 2px _palette(accent);
+        text-decoration: none;
+        transition: color 0.3s ease;
+        
+        &:hover {
+          color: _palette(accent);
+        }
+      }
+      
+      p {
+        font-size: 1.1em;
+        color: _palette(fg-light);
+        margin-top: 1rem;
+        font-style: italic;
+      }
+    }
+  }
+  
+  .content {
+    max-width: 100%;
+    
+    .about-text {
+      padding: 2rem;
+      background: rgba(_palette(bg), 0.8);
+      border-left: 4px solid _palette(accent);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      
+      p {
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        color: _palette(fg);
+        font-size: 1.1em;
+        text-align: justify;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        &:first-child {
+          font-size: 1.15em;
+          color: _palette(fg-bold);
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@include breakpoint('<=medium') {
+  #about {
+    .content .about-text {
+      padding: 1.5rem;
+      
+      p {
+        font-size: 1em;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@include breakpoint('<=small') {
+  #about {
+    .post.featured .major {
+      margin-bottom: 2rem;
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+    }
+    
+    .content .about-text {
+      padding: 1rem;
+      
+      p {
+        font-size: 0.95em;
+        margin-bottom: 1.5rem;
+        
+        &:first-child {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+// Animation for section entrance
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#about .content section {
+  animation: slideInUp 0.6s ease-out;
+  animation-fill-mode: both;
+  
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * 0.1}s;
+    }
+  }
+}

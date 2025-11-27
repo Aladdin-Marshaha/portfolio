@@ -6,28 +6,38 @@ function About() {
       <article className="post featured">
         <header className="major">
           <h1><a>About Me</a></h1>
-          <p>Software Engineer specialized in .NET development</p>
+          <p>Get to know me better</p>
         </header>
+        
         <div className="content">
-          <p>
-            I am a passionate Software Engineer specializing in .NET Fullstack development. 
-            With a solid educational background from vocational college and practical experience 
-            in both frontend and backend development, I strive to deliver high-quality solutions 
-            that make a difference.
-          </p>
-          <h3>My Background:</h3>
-          <p>
-            Educated in .NET development at vocational college (2 years) where I built a solid 
-            foundation in software development. Through practical projects and theoretical knowledge, 
-            I have developed expertise in everything from small web applications to complex enterprise systems.
-          </p>
-          <h3>What I'm passionate about:</h3>
-          <ul>
-            <li>Clean and efficient code</li>
-            <li>User-centered design</li>
-            <li>Continuous learning</li>
-            <li>Teamwork and knowledge sharing</li>
-          </ul>
+          <div className="about-text">
+            <p>
+              I'm a .NET Fullstack developer with a unique blend of creativity, technical skill, 
+              and leadership experience. Between 2023–2025, I studied Fullstack .NET development 
+              at EC Utbildning, where I learned to build complete, scalable web applications 
+              using modern tools and frameworks.
+            </p>
+            
+            <p>
+              Before becoming a developer, I worked as a fashion designer—an experience that 
+              sharpened my eye for detail, structure, and visual design. These strengths now 
+              help me create clean, user-friendly interfaces. I later worked as a team leader 
+              at McDonald's, where I learned to lead teams, stay calm under pressure, and 
+              deliver results.
+            </p>
+            
+            <p>
+              My passion for technology has been with me since childhood, and today I use it 
+              to build modern, responsive, and meaningful web applications. I enjoy exploring 
+              new technologies, solving problems creatively, and continuously improving my skills.
+            </p>
+            
+            <p>
+              I bring a combination of design sense, leadership, and technical knowledge that 
+              makes me a valuable contributor to any development team. My goal is to create 
+              intuitive digital experiences that feel great to use.
+            </p>
+          </div>
         </div>
       </article>
     </div>

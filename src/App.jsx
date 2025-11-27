@@ -163,7 +163,7 @@ function App() {
               margin: '0 auto 20px auto',
             }}
           />
-          <h1>Aladdin Marshaha</h1>
+          <h1>Hi, I'm Aladdin</h1>
           <h2>Software Engineer | .NET Specialist</h2>
           <ul className="actions">
             <li>
@@ -177,7 +177,7 @@ function App() {
         {/* Header */}
         <header id="header">
           <Link to="/" className="logo">
-            Aladdin Marshaha
+            Welcome to my Portfolio
           </Link>
         </header>
 

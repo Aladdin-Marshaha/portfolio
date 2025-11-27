@@ -91,7 +91,9 @@ function Contact() {
           <section className="split contact">
             <section className="alt">
               <h3>Address</h3>
-              <p>Helsingborg , Sverige</p>
+              <p>
+                <a>Helsingborg , Sverige</a>
+              </p>
             </section>
             <section>
               <h3>Phone</h3>
