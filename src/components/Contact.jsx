@@ -104,7 +104,7 @@ function Contact() {
             <section>
               <h3>Email</h3>
               <p>
-                <a href="mailto:aladid90.se@gmail.com">aladid90.se@gmail.com</a>
+                <a href="mailto:aladdin90.se@gmail.com">aladdin90.se@gmail.com</a>
               </p>
             </section>
             <section>
