@@ -7,63 +7,58 @@ function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Platform",
-      description: "En fullständig e-handelsplattform med kundvagn, betalningssystem och adminpanel. Byggd med modern teknik för optimal prestanda.",
-      tools: ["React", "Node.js", "MongoDB", "Stripe"],
-      status: "live", // "live", "github", eller "development"
-      githubUrl: "https://github.com/username/ecommerce-project",
-      liveUrl: "https://your-deployed-site.com",
-      hidden: true
-    },
-    {
+      title: "Cilicon",
+      description: "School project, full-stack development using ASP .NET Core MVC..",
+      tools: ["C#", "ASP.NET Core", "MVC", "Entity Framework", "SQL Server", "SCSS", "JavaScript", "HTML5", "Rest API"],
+      status: "github",
+      // School project, complete code available on GitHub
+      githubUrl: "https://github.com/Aladdin-Marshaha/CiliconMVC",
+      hidden: false
+        },
+        {
       id: 2,
       title: "Portfolio Website",
-      description: "En responsiv portfolio-webbplats med modern design och smooth animationer. Visar mina projekt och färdigheter på ett professionellt sätt.",
-      tools: ["React", "SCSS", "Vite", "EmailJS"],
+      description: "A responsive portfolio website with modern design and smooth animations. Showcases my projects and skills in a professional way.",
+      tools: ["React", "SCSS", "Vite", "EmailJS", "JavaScript", "HTML5"],
       status: "live",
       githubUrl: "https://github.com/Aladdin-Marshaha/portfolio",
       liveUrl: "https://aladdin-marshaha.github.io/portfolio/",
       hidden: true
-    },
-    {
+        },
+        {
       id: 3,
-      title: "Task Management App",
-      description: "En produktivitetsapp för att hantera uppgifter och projekt. Inkluderar kanban-boards, tidsplanering och teamsamarbete.",
-      tools: ["TypeScript", "React", "Firebase", "Material-UI"],
-      status: "showcase", // Visar skärmdumpar istället för kod
-      images: [
-        "/src/images/pic01.jpg",
-        "/src/images/bg.jpg",
-        "/src/images/overlay.png"
-      ],
-      hidden: true
-    },
-    {
-      id: 4,
-      title: "Weather Dashboard",
-      description: "En väderapp som visar aktuellt väder och prognoser för olika städer. Integrerad med externa API:er för realtidsdata.",
-      tools: ["JavaScript", "API", "CSS", "Chart.js"],
-      status: "github", // Klar kod, kan klickas för att se GitHub
-      githubUrl: "https://github.com/username/weather-dashboard",
-      hidden: true
-    },
-    {
-      id: 5,
-      title: "Booking System",
-      description: "Ett bokningssystem för restauranger och events. Hanterar reservationer, kalender och kundhantering med en intuitiv gränssnitt.",
-      tools: ["Blazor", "C#", "SQL Server", "Bootstrap"],
-      status: "development", // Pågående utveckling, inte klickbar
-      githubUrl: null,
-      hidden: false  // Gömd som exempel
-    },
-    {
-      id: 6,
-      title: "Chat Application",
-      description: "En realtidschattapplikation med privata meddelanden, gruppchatter och fildelning. Säker och skalbar arkitektur.",
-      tools: ["Socket.io", "React", "Express", "PostgreSQL"],
-      status: "development", // Pågående utveckling, inte klickbar
-      githubUrl: null,
+      title: "Console Application / Address Book",
+      description: "School project. AdressBok is a console-based address book in C# with CRUD functions for contacts. Uses interface-driven architecture, dependency injection and JSON persistence with Newtonsoft.Json.",
+      tools: ["C#", ".NET 8", "Entity Framework Core", "SQL Server LocalDB", "Microsoft.Extensions.Hosting"],
+      status: "github",
+      githubUrl: "https://github.com/Aladdin-Marshaha/Console-App-AdressBok-",
       hidden: false
+        },
+        {
+      id: 4,
+      title: "Product Management Console Application",
+      description: "School project. A CRUD console application for product management. Uses Entity Framework Core with LocalDB persistence, follows Repository/Service pattern and implements dependency injection with a text-based menu interface.",
+      tools: ["C#", ".NET 8", "Entity Framework Core", "SQL Server LocalDB", "Microsoft.Extensions.Hosting"],
+      status: "github",
+      githubUrl: "https://github.com/Aladdin-Marshaha/ConsoleAppProducts",
+      hidden: false
+        },
+        {
+      id: 5,
+      title: "Crito - Website",
+      description: "School project. A modern website built with React featuring a component-based architecture. Includes comprehensive landing page, services presentation, news section with articles, contact forms, and responsive design for multiple devices.",
+      tools: ["React", "React Router DOM", "Bootstrap", "Formik", "Yup", "SCSS", "Font Awesome", "Jest"],
+      status: "github", 
+      githubUrl: "https://github.com/Aladdin-Marshaha/CritoProject-React.git",
+      hidden: false
+        },
+        { id: 6,
+      title: "UserProvider - Authentication API",
+      description: "School group project. A comprehensive .NET 8 Web API for user authentication and management. Features JWT-based authentication, role-based authorization (SuperUser, Admin, User), email verification system, Azure Service Bus integration, and support for both SQL Server and SQLite databases.",
+      tools: [".NET 8", "ASP.NET Core Web API", "Entity Framework Core", "JWT Authentication", "ASP.NET Identity", "Azure Service Bus", "SQL Server", "SQLite", "Swagger/OpenAPI", "xUnit", "C#"],
+      status: "github", 
+      githubUrl: "https://github.com/Projekt-Grupp8/UserProvider",
+      hidden: true
     },
     {
       id: 7,
@@ -72,7 +67,7 @@ function Projects() {
       tools: ["Socket.io", "React", "Express", "PostgreSQL"],
       status: "development", // Pågående utveckling, inte klickbar
       githubUrl: null,
-      hidden: false
+      hidden: true
     },
     {
       id: 8,
@@ -81,7 +76,20 @@ function Projects() {
       tools: ["Socket.io", "React", "Express", "PostgreSQL", "Firebase"],
       status: "github", // Pågående utveckling, inte klickbar
       githubUrl: "https://github.com/username/weather-dashboard", 
-      hidden: false
+      hidden: true
+    },
+    {
+      id: 3,
+      title: "Test för bild modal",
+      description: "En produktivitetsapp för att hantera uppgifter och projekt. Inkluderar kanban-boards, tidsplanering och teamsamarbete.",
+      tools: ["C#", ".NET 8", "", "Material-UI"],
+      status: "github", // Visar skärmdumpar istället för kod
+      images: [
+        "/src/images/pic01.jpg",
+        "/src/images/bg.jpg",
+        "/src/images/overlay.png"
+      ],
+      hidden: true
     }
   ];
 
