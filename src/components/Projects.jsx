@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function Projects() {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -79,17 +80,19 @@ function Projects() {
       hidden: true
     },
     {
-      id: 3,
-      title: "Test för bild modal",
-      description: "En produktivitetsapp för att hantera uppgifter och projekt. Inkluderar kanban-boards, tidsplanering och teamsamarbete.",
-      tools: ["C#", ".NET 8", "", "Material-UI"],
-      status: "github", // Visar skärmdumpar istället för kod
+      id: 9,
+      title: "Eventomania - Event Discovery Platform",
+      description: "School group project using agile methodology. A modern web application for discovering and managing events with interactive map functionality. The platform allows users to explore events in their area, register for accounts, and navigate between different pages with a responsive design. The project includes authentication, database management and advanced map integration to display events geographically.",
+      tools: ["React", "Vite", "JavaScript", "HTML5", "CSS3/SCSS", "Leaflet", "Firebase", "Firebase Authentication"],
+      status: "showcase",
       images: [
-        "/src/images/pic01.jpg",
-        "/src/images/bg.jpg",
-        "/src/images/overlay.png"
+        "/images/Screenshot-1.png",
+        "/images/Screenshot-2.png",
+        "/images/Screenshot-3.png",
+        "/images/Screenshot-4.png",
+        "/images/Screenshot-5.png"
       ],
-      hidden: true
+      hidden: false
     }
   ];
 
