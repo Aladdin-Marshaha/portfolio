@@ -7,6 +7,33 @@ function Projects() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const projects = [
     {
+      id: 10,
+      title: "Bagless Travel",
+      description: "Bagless Travel is a responsive landing page built with React for a service that enables travelers to journey without checked baggage. The project focuses on clear storytelling through sections such as the problem, solution, and key benefits, while providing a modern user experience with multilingual support (Swedish and English) and theme management (light and dark modes).",
+      tools: ["React 19", "Vite 8", "JavaScript (ES Modules)", "CSS", "React Context API", "LocalStorage", "ESLint"],
+      status: "github",
+      githubUrl: "https://github.com/Aladdin-Marshaha/bagless-traveling",
+      hidden: false
+    },
+    {
+      id: 11,
+      title: "EkoChamps Website",
+      description: "EkoChamps is a responsive multi-page website built with React for an environmental initiative that promotes sustainable and eco-friendly lifestyles. It presents information about the organization, highlights environmental statistics, and encourages users to join the community as an Eco Champion. The project includes a contact form, newsletter signup, image gallery, and a section for mobile app download, with a strong focus on accessibility and responsive design.",
+      tools: ["React 19", "React Router DOM", "Vite", "SASS (SCSS)", "ESLint", "GitHub Pages", "npm"],
+      status: "github",
+      githubUrl: "https://github.com/Aladdin-Marshaha/ekochamps-website",
+      hidden: false
+    },
+    {
+      id: 12,
+      title: "DriveMe",
+      description: "DriveMe is a web platform designed to simplify transportation and ride-sharing by connecting drivers and passengers in a user-friendly and efficient way. The platform focuses on easy booking, real-time trip management, and secure communication between users, while being built as a scalable and responsive modern application.",
+      tools: ["React", "JavaScript", "HTML5", "CSS3", "ASP.NET Core (.NET)", "SQL Server", "JWT Authentication", "REST API", "Git", "GitHub", "Figma", "Azure (planned)"],
+      status: "development",
+      githubUrl: null,
+      hidden: false
+    },
+    {
       id: 1,
       title: "Cilicon",
       description: "School project, full-stack development using ASP .NET Core MVC..",

@@ -197,7 +197,7 @@ function App() {
 
         <div id="copyright">
           <ul>
-            <li>2025 © Designed and built by Aladdin Marshaha.</li>
+            <li>2026 © Designed and built by Aladdin Marshaha.</li>
           </ul>
         </div>
       </div>
